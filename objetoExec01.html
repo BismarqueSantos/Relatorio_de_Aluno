@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <style>
+        .btn {
+            margin: 20px 0;
+        }
+
+        .form-row {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <div class="container">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" placeholder="Nome" id="n1">
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" placeholder="CPF" id="n2">
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" placeholder="RG" id="n3">
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" placeholder="Email" id="n4">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" placeholder="Digite sua nota 1" id="notas1">
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" placeholder="Digite sua nota 2" id="notas2">
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" placeholder="Digite sua nota 3" id="notas3">
+                </div>
+                <div class="col-md-6">
+                    <label>Média</label>
+                    <input type="text" class="form-control" id="media">
+                </div>
+                <div class="col-md-6">
+                    <label>Situação</label>
+                    <input type="text" class="form-control" id="situacao">
+                </div>
+
+            </div>
+            <button type="button" class="btn btn-success" onclick="cliente.situacao()">Media</button>
+            <!-- Button to Open the Modal -->
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" onclick="cliente.relatorio()">
+                Relatório
+            </button>
+
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Relatório do Aluno</h4>
+                            <button type="button" class="close" onclick="cliente.relatorio()"
+                                data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>Nome:</h5>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 id="n"></h5>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Email:</h5>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 id="e"></h5>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Cpf:</h5>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 id="c"></h5>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Rg:</h5>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 id="r"></h5>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Media:</h5>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 id="m"></h5>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Situação:</h5>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 id="s"></h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/exerc01.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
